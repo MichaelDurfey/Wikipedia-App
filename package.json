@@ -1,0 +1,24 @@
+{
+  "name": "wikipedia-app",
+  "version": "1.0.0",
+  "description": "Wikipedia clone",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichaelDurfey/Wikipedia-App.git"
+  },
+  "author": "Michael Durfey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MichaelDurfey/Wikipedia-App/issues"
+  },
+  "homepage": "https://github.com/MichaelDurfey/Wikipedia-App#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "fontawesome": "^4.7.2",
+    "jquery": "^3.2.1"
+  }
+}
