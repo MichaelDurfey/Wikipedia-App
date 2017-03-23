@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WikipediaClone</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <script src="index.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script type = "text/javascript" src="index.js"></script>
+  <script type = "text/javascript" src="/jquery.js"></script>
+  <link rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -17,11 +18,10 @@
       <div class = "col-lg-4 col-lg-offset-4 well" id ="mainWell">
       
         <a href = "https://en.wikipedia.org/wiki/Special:Random" target = "_blank" alt = "random link button">Click Here For A Random Article</a>
-          <form action="/action_page.php">
-            Search Term: <input type="text" name="searchTerm"><br>
+          <form action = "/index.js" method = "post" onsubmit = "return false">
+            Search Term: <input type="text" id ="userInput"><br>
                 <input type="submit" value="Submit">
           </form>
-
 
       </div>
     </div>
