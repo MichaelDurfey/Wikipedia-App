@@ -1,15 +1,15 @@
 
 $(document).ready(function (){
+var searchterm = "";
+  $('#submitButton').on('click', () => { 
+    var searchTerm = document.getElementById('userInput').value;
+    console.log(searchTerm);
+  })
 
-
-
-
-$.get(`/wikipediaSearch`, {searchTerm}).then(a => {
-  console.log(a);
-});
-
-
-
+  $('#submitButton').on('click', () => { $.get(`/wikipediaSearch`, {searchTerm})
+        .then(a => {
+        a = JSON.parse(a);
+        console.log(a);
+        });
+  });
 })
-
-var searchTerm = document.getElementById('userInput');
