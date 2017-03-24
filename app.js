@@ -18,8 +18,9 @@ var request = require('request');
 
 app.get('/wikipediaSearch', function(req, res){
   
-  var searchterm = req.query;
-  console.log(searchterm);
+  var searchTerm = req.query;
+  console.log(req);
+
 
   var wikipediaURL = `https://en.wikipedia.org/w/api.php?action=opensearch&search=${searchTerm}&limit=10&namespace=0&format=json`;
 
