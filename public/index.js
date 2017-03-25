@@ -1,15 +1,22 @@
 
 $(document).ready(function (){
-var searchterm = "";
-  $('#submitButton').on('click', () => { 
-    var searchTerm = document.getElementById('userInput').value;
-    console.log(searchTerm);
-  })
+    $('#submitButton').click( function () { 
+      var searchTerm = $('#userInput').val();
+        $.get('/wikipediaSearch', {searchTerm}, function(d) { 
+          d = JSON.parse(d);
+            var html = "";
+            console.log(d);
+            d.forEach(function (value) { 
+            var keys = Object.keys(value);
+            html += "<div class = 'resultDiv'>";
+            keys.forEach(function(key) {
+              html += value[key];
+            })
+            html += "</div><br>";
+          })
 
-  $('#submitButton').on('click', () => { $.get(`/wikipediaSearch`, {searchTerm})
-        .then(a => {
-        a = JSON.parse(a);
-        console.log(a);
-        });
-  });
-})
+          $('#searchResultContainer').html(`${html}`);
+
+        })
+    })
+});

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href = "/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="/fontawesome/index.js">
+  <link rel="stylesheet" type="text/css" href="/font-awesome/css/font-awesome.css">
   <title>WikipediaClone</title>
   <link rel="stylesheet" href="/styles.css">
    <script type = "text/javascript" src="/jquery/dist/jquery.js"></script>
@@ -16,12 +16,17 @@
   <div class = "container-fluid background">
     <div class = "row">
       <div class = "col-lg-4 col-lg-offset-4" id ="mainWell">  
-          <a href = "https://en.wikipedia.org/wiki/Special:Random" target = "_blank" alt = "random link button" class = "text-center">Click Here For A Random Article</a>
-        <form>
+          <a href = "https://en.wikipedia.org/wiki/Special:Random" target = "_blank" alt = "random link button" class = "text-center" id = "linkButton">Click Here For A Random Article</a>
+          <form>
+            <input class = "form-control" type="text" placeholder="search here" id = "userInput">
+            <button class = "btn btn-sm btn-primary col-lg-offset-5" type = "button" 
+            id = "submitButton">Submit</button>
+          </form>
+          <div class = "searchResultContainer" id = "searchResultContainer">
+          
 
-            <input class = "form-control" type="text" placeholder="search" id = "userInput">
-            <input class = "btn btn-sm btn-primary col-lg-offset-5" type = "Submit" id = "button">
-        <form>
+          </div>
+
       </div>
     </div>
   </div>
