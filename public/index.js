@@ -11,27 +11,34 @@ $(document).ready(function (){
 
           d.forEach(function (value) { 
             if (d.indexOf(value) != 0) {
-              var keys = Object.keys(value);
-              
-              d.find(function(element, index, array) {
-                  if (index === index) {
-                  newArray.push(element[index]);
+              var key = Object.keys(value);
+              // console.log("value: " + value)
+              // console.log("key: " + key)
+
+              for (var i = 0; i <= value.length; i++) {
+                  var result = function() {
+                    this.description = d[2][i];
+                    this.url = d[3][i];
                   }
-                  console.log(newArray);
-              })
-              // var html = "";
-              // for (var i = 0; i <= value.length - 1; i ++) {
-              //     console.log(value[i])
-              //       array.push(value[i])
-              //        html += "<div class = 'resultDiv' style = 'background-color: #F7F8F9; border-radius: 10px;'>";
-              //         html += "<p class = 'resultText' style = 'color: black' id = 'resultText'>";
-              //         html += value[i];
-              //         html += "</p>";
-              //         html += "</div><br>";             
-              //   }
+              var div1 = new result();
+              div1.h1 = d[1][i]
+              console.log(div1);
+                }
               }
-            })
-          $('#searchResultContainer').html(`${html}`);
+              // d.find(function(element, index, array) {
+              //   for (var i = 0; i <= element.length; i ++) {
+              //     if (key === element[key]) {
+              //         console.log(element);
+              //         html += "<div class = 'resultDiv' style = 'background-color: #F7F8F9; border-radius: 10px;'>";
+              //         html += "<p class = 'resultText' style = 'color: black' id = 'resultText'>";
+              //         html += element[index];
+              //         html += "</p>";
+              //         html += "</div><br>";     
+              //     }
+              //   }
+              // })         
           })
+          $('#searchResultContainer').html(`${html}`);
+        })
       })
-    });
+});
