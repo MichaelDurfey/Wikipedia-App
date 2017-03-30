@@ -10,9 +10,26 @@ body {
 
 }
 
-#resultDiv {
-  font-family: Roboto;
-  color: white;
+.btn {
+  margin-top: 10px;
+}
 
+.resultDiv {
+    font-family: Roboto;
+    background-color: #777777;
+    text-align: left;
+    padding: 1px 2% 1px 3%;
+    margin-top: 15px;
+     margin-bottom: 4px; 
+}
 
+.resultDiv > h1 {
+  text-align: left;
+  padding-bottom: 0px;
+  
+}
+
+p {
+    margin: 0 0 10px;
+    padding-bottom: 12px;
 }
