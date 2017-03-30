@@ -15,15 +15,27 @@
 
   <div class = "container-fluid background">
     <div class = "row">
-      <div class = "col-lg-8 col-lg-offset-2 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2" id ="mainWell">  
-          <a href = "https://en.wikipedia.org/wiki/Special:Random" target = "_blank" alt = "random link button" class = "text-center randomArticleLink" id = "linkButton">Click Here For A Random Article</a>
-            <input class = "form-control" type="text" placeholder="search here" id = "userInput">
-            <button class = "btn btn-sm btn-primary col-lg-offset-5" type = "button" 
-            id = "submitButton">Submit</button>
-      </div>
-      <div class = "searchResultContainer col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1" id = "searchResultContainer">
-          </div>
+    <div class = "searchBarContainer col-lg-8 col-lg-offset-2 col-md-6 col-md-offset-3 col-sm-4 col-sm-offset-3 col-xs-8 col-xs-offset-2" id = "searchBarContainer">
+    <div class = "text-center">
+    <a href = "https://en.wikipedia.org/wiki/Special:Random" target = "_blank" alt = "random link button" class = "text-center randomArticleLink" id = "linkButton">Random Article</a>
     </div>
+      <div class = "mainWell" id ="mainWell"> 
+          <div class = "input-group">
+            <input class = "form-control userInput" type="search" placeholder="search here" id = "userInput"/>
+            <span class = "input-group-addon userInput" style = "margin-top: 25px; height: 20px">
+            <i class = "fa fa-search"></i>
+            </span>
+          </div>
+      </div>
+      <div class = "row">
+      <div class = "button col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+            <button class = "btn btn-sm btn-primary text-center" type = "button" id = "submitButton">Submit</button>
+      </div>
+      </div>
+    </div>
+    </div>
+      <div class = "searchResultContainer col-lg-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-10 col-xs-offset-1 col-xs-pull-1" id = "searchResultContainer">
+      </div>
   </div>
   
 </body>

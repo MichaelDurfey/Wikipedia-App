@@ -7,7 +7,67 @@ body {
 
 #mainWell {
   font-family: Roboto;
+}
 
+.randomArticleLink {
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+
+a:hover, a:focus {
+    color: #7c2323;
+    text-decoration: none; 
+}
+
+.input-group {
+  margin-top: 8px;
+}
+
+.searchBarContainer {
+   position: absolute;
+  margin: auto;
+  width: 600px;
+  height: 100px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@media(max-width: 600px) {
+  .searchBarContainer {
+   position: absolute;
+  margin: auto;
+  width: 400px;
+  height: 50px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: -30px;
+  }
+}
+
+@media(max-width: 480px) {
+  .searchBarContainer {
+   position: absolute;
+  margin: auto;
+  width: 350px;
+  height: 50px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: -30px;
+  }
+}
+
+#searchResultContainer {
+  margin-top: 0px;
+  background-color: #092B40;
+
+}
+
+.col-xs-offset-1 {
+    margin-left: 2.333333%;
 }
 
 .btn {
@@ -21,6 +81,19 @@ body {
     padding: 1px 2% 1px 3%;
     margin-top: 15px;
      margin-bottom: 4px; 
+}
+
+.resultDiv:hover {
+  cursor:pointer;
+  border-left: solid;
+  border-width: 5px;
+  border-color: green;
+  border-radius: 0;
+}
+
+.resultDiv:nth-child(1) {
+  margin-top: 0px;
+
 }
 
 .resultDiv > h1 {
