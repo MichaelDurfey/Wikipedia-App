@@ -11,48 +11,46 @@ $(document).ready(function (){
       var searchTerm = $('#userInput').val();
       $.get('/wikipediaSearch', {searchTerm}, function(d) { 
         d = JSON.parse(d);
-        // console.log(d);
         var newArray = [];
-
-            if (d.indexOf(d) != 0) {  
-        
-              for (var i = 0; i <= d.length; i++) {
-                      var result = function(item) {                     d
-                      this.h1 = item[i];
-                      this.description = item[i];
-                      this.url = item[i];
-                      }
-                      var resultDiv = new result();
-                    var html = "";
-
-                    if (resultDiv.h1 !== '' && resultDiv.h1 !== undefined && resultDiv.description !== '' && resultDiv.description !== undefined) {
-                    html += `<div class = 'resultDiv' style = 'background-color: #F7F8F9; border-radius: 10px;' onclick="window.open('${resultDiv.url}');">`;
-                    html += "<h1 class = 'resultText' style = 'color: black' id = 'resultText'>";
-                    html += resultDiv.h1;
-                    html += "</h1><br>";
-                    html += "<p class = 'resultText' style = 'color: black' id = 'resultText'>";
-                    html += resultDiv.description;
-                    html += "</p><br>";
-                    html += "</div><br>";  
-                    }
-
-                    else if (resultDiv.h1 !== '' && resultDiv.h1 !== undefined && resultDiv.description == '' || resultDiv.description == undefined) {
-                    html += `<div class = 'resultDiv' style = 'background-color: #F7F8F9; border-radius: 10px;' onclick="window.open('${resultDiv.url}');">`;
-                    html += "<h1 class = 'resultText' style = 'color: black' id = 'resultText'>";
-                    html += resultDiv.h1;
-                    html += "</h1><br>";
-                    html += "<p class = 'resultText' style = 'color: black' id = 'resultText'>";
-                    html += "No summary returned :("
-                    html += "</p><br>";
-                    html += "</div><br>"; 
-                    }
-                    if (resultDiv.h1 === undefined) {
-                      console.log("cannot get");
-                    }
-                };
+        var html = "";
+          for (var n = 1; n <= 1; n++){ 
+            for (var i = 0; i <= d[n].length - 1; i++) { 
+                        
+              var result = function(){
+              this.h1 = d[1][i];
+              this.description = d[2][i];
+              this.url = d[3][i];
               }
-            }               
-          )
-        $('#searchResultContainer').html(`${html}`);
+
+              var resultDiv = new result();
+
+              let hasTitle = resultDiv.h1 !== '' && resultDiv.h1 !== undefined;
+              let hasDesc  = resultDiv.description !== '' && resultDiv.description !== undefined;
+              
+              if (hasTitle) {
+                html += `
+                      <div
+                        class='resultDiv'
+                        style='background-color: #F7F8F9; border-radius: 10px;'
+                        onclick="window.open('${resultDiv.url}');"
+                      >
+                        <h1 class='resultText' style='color: black' id='resultText'>
+                          ${resultDiv.h1}
+                        </h1>
+                        <br>
+                        <p class='resultText' style='color: black' id='resultText'>
+                          ${hasDesc ? resultDiv.description : 'No summary returned :('}
+                        </p>
+                        <br>
+                      </div>
+                      <br>`
+              }           
+              if (resultDiv.h1 === undefined) {
+                console.log("cannot get");
+              }
+            }
+          }
+          $('#searchResultContainer').html(`${html}`); 
+        })  
+      })
     })
-  })
